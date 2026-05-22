@@ -64,7 +64,7 @@ keybind = cmd+t=new_tab
 keybind = cmd+d=new_split:right
 keybind = cmd+shift+d=new_split:down
 # Prompt you to rename the focused pane/split
-keybind = ctrl+shift+n=prompt_surface_title
+keybind = ctrl+shift+r=prompt_surface_title
 custom-shader = "/absolute/path/to/ghostty/shaders/focus-border.glsl"
 custom-shader-animation = true
 ```
