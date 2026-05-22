@@ -60,6 +60,9 @@ This setup cycles split focus with `Ctrl+Tab` and shows a short blue border when
 
 ```ini
 keybind = ctrl+tab=goto_split:next
+keybind = cmd+t=new_tab
+keybind = cmd+d=new_split:right
+keybind = cmd+shift+d=new_split:down
 custom-shader = "/absolute/path/to/ghostty/shaders/focus-border.glsl"
 custom-shader-animation = true
 ```

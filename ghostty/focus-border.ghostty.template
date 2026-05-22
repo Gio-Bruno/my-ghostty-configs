@@ -2,5 +2,8 @@
 # Source: https://github.com/Gio-Bruno/my-ghostty-configs
 
 keybind = ctrl+tab=goto_split:next
+keybind = cmd+t=new_tab
+keybind = cmd+d=new_split:right
+keybind = cmd+shift+d=new_split:down
 custom-shader = {{FOCUS_BORDER_SHADER}}
 custom-shader-animation = true
