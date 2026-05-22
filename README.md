@@ -51,7 +51,7 @@ GHOSTTY_CONFIG_FILE=/path/to/config.ghostty ./install.sh
 
 ## Focus Border
 
-This setup cycles split focus with `Ctrl+Tab` and shows a short blue border when a split gains focus.
+This setup cycles split focus with `Ctrl+Tab` and keeps a blue border on the focused split.
 
 ### Files
 
