@@ -1,13 +1,17 @@
-# Ghostty Focus Border
+# My Ghostty Configs
 
-Small Ghostty setup for cycling split focus with `Ctrl+Tab` and showing a short blue border when a split gains focus.
+Personal Ghostty config notes and reusable setup snippets.
 
-## Files
+## Focus Border
+
+This setup cycles split focus with `Ctrl+Tab` and shows a short blue border when a split gains focus.
+
+### Files
 
 - `config.ghostty`: Ghostty config snippet.
 - `shaders/focus-border.glsl`: Custom shader that draws the focus blink.
 
-## Install
+### Install
 
 Copy or symlink the shader:
 
