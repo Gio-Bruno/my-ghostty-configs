@@ -1,3 +1,0 @@
-keybind = ctrl+tab=goto_split:next
-custom-shader = ~/.config/ghostty/shaders/focus-border.glsl
-custom-shader-animation = true

@@ -1,0 +1,6 @@
+# Generated from my-ghostty-configs.
+# Source: https://github.com/Gio-Bruno/my-ghostty-configs
+
+keybind = ctrl+tab=goto_split:next
+custom-shader = {{FOCUS_BORDER_SHADER}}
+custom-shader-animation = true

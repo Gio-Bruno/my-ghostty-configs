@@ -2,36 +2,64 @@
 
 Personal Ghostty config notes and reusable setup snippets.
 
+## Install
+
+```sh
+git clone https://github.com/Gio-Bruno/my-ghostty-configs.git
+cd my-ghostty-configs
+./install.sh
+```
+
+The installer:
+
+- writes `~/.config/ghostty/my-ghostty-configs.ghostty`
+- adds a marked `config-file` include block to your Ghostty config
+- validates the final Ghostty config when the Ghostty CLI is available
+
+Reload Ghostty config or restart Ghostty after installing.
+
+## Update
+
+```sh
+cd my-ghostty-configs
+git pull
+./install.sh
+```
+
+Run the installer again after pulling updates. It is idempotent and updates the same managed block.
+
+## Uninstall
+
+```sh
+./uninstall.sh
+```
+
+The uninstaller removes only the managed include block and generated config file.
+
+## Config Location
+
+By default the scripts use:
+
+- macOS: `~/Library/Application Support/com.mitchellh.ghostty/config.ghostty`
+- Linux/BSD: `${XDG_CONFIG_HOME:-~/.config}/ghostty/config.ghostty`
+
+Override this with `GHOSTTY_CONFIG_FILE`:
+
+```sh
+GHOSTTY_CONFIG_FILE=/path/to/config.ghostty ./install.sh
+```
+
 ## Focus Border
 
 This setup cycles split focus with `Ctrl+Tab` and shows a short blue border when a split gains focus.
 
 ### Files
 
-- `config.ghostty`: Ghostty config snippet.
-- `shaders/focus-border.glsl`: Custom shader that draws the focus blink.
-
-### Install
-
-Copy or symlink the shader:
-
-```sh
-mkdir -p ~/.config/ghostty/shaders
-cp shaders/focus-border.glsl ~/.config/ghostty/shaders/focus-border.glsl
-```
-
-Add this to your Ghostty config:
+- `ghostty/focus-border.ghostty.template`: Ghostty config snippet used by the installer.
+- `ghostty/shaders/focus-border.glsl`: Custom shader that draws the focus blink.
 
 ```ini
 keybind = ctrl+tab=goto_split:next
-custom-shader = ~/.config/ghostty/shaders/focus-border.glsl
+custom-shader = "/absolute/path/to/ghostty/shaders/focus-border.glsl"
 custom-shader-animation = true
 ```
-
-On macOS, the Ghostty config is usually:
-
-```text
-~/Library/Application Support/com.mitchellh.ghostty/config.ghostty
-```
-
-Reload Ghostty config after installing.
