@@ -51,12 +51,12 @@ GHOSTTY_CONFIG_FILE=/path/to/config.ghostty ./install.sh
 
 ## Focus Border
 
-This setup cycles split focus with `Ctrl+Tab` and keeps a blue border on the focused split.
+This setup cycles split focus with `Ctrl+Tab` and keeps a persistent blue border on the focused split.
 
 ### Files
 
 - `ghostty/focus-border.ghostty.template`: Ghostty config snippet used by the installer.
-- `ghostty/shaders/focus-border.glsl`: Custom shader that draws the focus blink.
+- `ghostty/shaders/focus-border.glsl`: Custom shader that highlights the focused split.
 
 ```ini
 keybind = ctrl+tab=goto_split:next
@@ -66,5 +66,5 @@ keybind = cmd+shift+d=new_split:down
 # Prompt you to rename the focused pane/split
 keybind = ctrl+shift+r=prompt_surface_title
 custom-shader = "/absolute/path/to/ghostty/shaders/focus-border.glsl"
-custom-shader-animation = true
+custom-shader-animation = false
 ```
